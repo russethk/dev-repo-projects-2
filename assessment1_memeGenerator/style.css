@@ -1,27 +1,25 @@
 .container {
     width: 50%;
-  	height: 100%;
     margin-left: 20px;
 }
 
 .formContainer {
     position: relative;
-    width: 95%;
-  	height: 100%;
-    top: -35px;
+    width: 450px;
+    top: -45px;
     background-color:rgb(249, 246, 242); 
   	background-position: center;
     border: 2px solid grey;
   	background-size: cover;
     align-items: center;
     justify-content: center;
-    padding: 10px;
+    margin-right: 30px;
 }
 
 #demoDiv {
-    display:inline-block;
-    max-width: 150px;
-    margin-left: 30px;
+  position: relative;
+  width: 80%;
+  margin: 0 auto;
 }
 
 
@@ -35,8 +33,9 @@ h1 {
 
 p {
   font-family:Arial, Helvetica, sans-serif;
-  font-size: 18px;
+  font-size: 16px;
   color: darkslateblue;
+  font-weight:bold;
   margin-left: 20px;
 }
 

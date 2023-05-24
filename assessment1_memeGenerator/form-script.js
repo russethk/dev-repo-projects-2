@@ -3,15 +3,9 @@ document.addEventListener("DOMContentLoaded", function() {
   window.onload = function() {
     const el = document.createElement("img");
     el.setAttribute("src", "images/meme.png");
-    el.setAttribute("width", "400");
+    el.setAttribute("width", "80%");
     document.getElementById("demoDiv").appendChild(el);
   }
-
-  function image(thisImg) {
-    const img = document.createElement("IMG");
-    img.src = "images/"+thisImg;
-    document.getElementById('demoDiv').appendChild(img);
-}
 
   let img = document.getElementsByTagName("img");
   let form = document.querySelector("#newForm");
@@ -19,6 +13,7 @@ document.addEventListener("DOMContentLoaded", function() {
 
   newForm.addEventListener("submit", function(event){
     event.preventDefault();
+
     const meme = document.createElement("div");
     const textTop = document.createElement("div");
     const textBottom = document.createElement("div");
