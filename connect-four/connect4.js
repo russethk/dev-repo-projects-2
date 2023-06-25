@@ -74,6 +74,8 @@ function placeInTable(y, x) {
   const piece = document.createElement('div');
   piece.classList.add('piece');
   piece.classList.add(`p${currPlayer}`);
+  piece.style.top = -50 * (y + 2);
+  
   const spot = document.getElementById(`${y}-${x}`);
   spot.append(piece);
 }
