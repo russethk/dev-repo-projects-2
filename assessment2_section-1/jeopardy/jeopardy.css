@@ -1,0 +1,99 @@
+/* some colors you may find useful:
+  #115ff4
+  #060ce9
+  #28a200
+  #8d2ab5
+  #74119c
+*/
+
+body {
+  font-family: 'Lora', sans-serif;
+  text-align: center;
+  font-size: 11pt;
+  background: black;
+  color: white; 
+}
+
+#table-container {
+  width: 95%;
+  margin: 0 auto;
+  text-align: center;
+  font-family: 'Lora', sans-serif;
+  font-size: 11pt;
+  background: rgb(34,126,229);
+}
+
+h1 {
+  margin-top: -10px;
+  font-family: 'Agdasima', sans-serif;
+  font-weight: 700;
+  font-size: 5em;
+}
+
+button {
+  display: relative;
+  margin-top: -10px;
+  padding: 6px 0px;
+  background-color: #8D2AB5;
+  color: white;
+  border: none;
+  border-radius: 16px;
+  font-size: 14pt;
+  width: 140px;
+}
+
+button:hover {
+  background-color: #74119C;
+}
+
+table {
+  margin: 0 auto;
+  border-collapse: separate;
+  margin-top: 30px;
+  border-radius: 4px;
+  border-spacing: 10px;
+}
+
+.not-allowed {
+  cursor: not-allowed;
+}
+
+th {
+  width: 150px;
+  height: 60px;
+  padding: 6px 25px;
+  text-align: center;
+  font-weight: 700px;
+  font-size: 18px;
+  cursor: default;
+  letter-spacing: .3pt;
+  border-radius: 4px;
+  background-color: rgba(255,255,255,0.08);
+}
+
+td {
+  border-radius: 4px;
+  background-color: rgba(255,255,255,0.1);
+  width: 150px;
+  height: 100px;
+  padding: 6px 20px;
+  text-align: center;
+  cursor: pointer;
+  letter-spacing: .4pt;
+}
+
+.answer {
+  background-color: rgba(0, 255, 0, 0.4);
+  font-size: 18px;
+  font-style: italic;
+}
+
+i {
+  font-size: 3rem;
+  pointer-events: none;
+}
+
+.loader {
+  font-size: 4rem;
+  margin-top: 100px;
+}
