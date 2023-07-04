@@ -34,7 +34,7 @@ class Category {
     let response = await axios.get(`${BASE_URL}api/categories`, {
       params: {
           count: "150",
-          offset: Math.floor(Math.random() * (150 - 1) + 1) // random number between 1 and 150, varies offset between each request
+          offset: Math.floor(Math.random() * (100 - 1) + 1) // random number between 1 and 150, varies offset between each request
         }
     });
 
@@ -84,7 +84,7 @@ class Category {
   // format each question object inside the array
   let questionArray = randomQuestions.map((question) => {
     if (question.answer.startsWith("<i>")) {
-      question.answer = question.answer.slice(3, -4);
+      question.answer = question.answer.slice(3, -3);
     }
     return {
       question: question.question,
@@ -108,7 +108,7 @@ $(async function () {
   // format category titles
   function toTitleCase(str) {
     return str.replace(
-      /[^A-Z0-9,:;\-.?! ]/g,
+      /^(?=.*[A-Z0-9])[\w.,!"'\/$ ]+$/i,
       function(txt) {
         return txt.charAt(0).toUpperCase() + txt.substr(1).toLowerCase();
     });
