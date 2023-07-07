@@ -108,7 +108,7 @@ $(async function () {
   // format category titles
   function toTitleCase(str) {
     return str.replace(
-      /\w\S*/g,
+      /^(?=.*[A-Z0-9])[\w.,!"'\/$ ]+$/i, // remove special characters
       function(txt) {
         return txt.charAt(0).toUpperCase() + txt.substr(1).toUpperCase();
     });
