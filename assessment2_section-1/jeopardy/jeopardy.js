@@ -33,8 +33,8 @@ class Category {
   static async getCategoryIds() {
     let response = await axios.get(`${BASE_URL}api/categories`, {
       params: {
-          count: "150",
-          offset: Math.floor(Math.random() * (100 - 1) + 1) // random number between 1 and 150, varies offset between each request
+          count: "100",
+          offset: Math.floor(Math.random() * (500 - 1) + 1) // random number between 1 and 500, varies offset between each request
         }
     });
 
@@ -108,9 +108,9 @@ $(async function () {
   // format category titles
   function toTitleCase(str) {
     return str.replace(
-      /^(?=.*[A-Z0-9])[\w.,!"'\/$ ]+$/i,
+      /\w\S*/g,
       function(txt) {
-        return txt.charAt(0).toUpperCase() + txt.substr(1).toLowerCase();
+        return txt.charAt(0).toUpperCase() + txt.substr(1).toUpperCase();
     });
   }
 /** Fill the HTML table#jeopardy with the categories & cells for questions.
