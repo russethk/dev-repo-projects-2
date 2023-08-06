@@ -1,0 +1,34 @@
+{% extends 'base.html' %}
+
+<!-- display the form in a Jinja template -->
+{% block content %}
+    <div class="container" >
+        <div class="row">
+            <div class="col-md-7">
+                    <h1 class="heading display-8 mt-5 pb-3"><i class="fa fa-money" style="font-size:36px"></i> Currency Converter</h1>
+                    {% with messages = get_flashed_messages() %}
+                        {% if messages %}
+                        <div class="alert alert-danger" role="alert">
+                            {% for message in messages %}
+                             <p>{{ message }}</p>
+                             {% endfor %}
+                        </div>
+                        {% endif %}
+                    {% endwith %}
+                 <div class="alert alert-info mt-3" role="alert">
+                    <form role="form" action="/results" method="POST" id="currency-form">
+                        <div class="form-outline w-60">
+                            <label for="fromCurrency" class="form-label">From</label>
+                            <input class="form-control" name="fromCurrency" id="fromCurrency" autofocus placeholder="From currency code"></br>
+                            <label for="toCurrency" class="form-label">To</label>
+                            <input class="form-control" name="toCurrency" id="toCurrency" autofocus placeholder="To currency code"></br>
+                            <label for="amount" class="form-label">Amount</label>
+                            <input class="form-control" name="amount" id="amount" autofocus placeholder="Amount to convert"></br>
+                            <button type="submit" class="btn btn-primary">Convert</button>
+                        </div>
+                    </form>
+                </div>
+             </div>
+        </div>
+    </div>
+{% endblock %}

@@ -33,7 +33,7 @@ class Category {
   static async getCategoryIds() {
     let response = await axios.get(`${BASE_URL}api/categories`, {
       params: {
-          count: "500",
+          count: "100",
           offset: Math.floor(Math.random() * (500 - 1) + 1) // random number between 1 and 500, varies offset between each request
         }
     });
